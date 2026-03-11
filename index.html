@@ -6,34 +6,84 @@
 <style>
 
 body{
-background:black;
+margin:0;
+font-family:Arial;
 color:white;
 text-align:center;
-font-family:Arial;
+background-image:url("arkaplan.jpg");
+background-size:cover;
+background-position:center;
+}
+
+/* profil */
+
+.profile{
+width:170px;
+border-radius:50%;
+margin-top:40px;
+}
+
+/* orta alan */
+
+.middle{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:80px;
+}
+
+.leftimg{
+width:320px;
+}
+
+.rightimg{
+width:320px;
+}
+
+/* plak sistemi */
+
+.plakcontainer{
+position:fixed;
+top:30px;
+right:30px;
+width:160px;
+height:160px;
 }
 
 .plak{
-width:150px;
-animation:don 4s linear infinite;
+width:160px;
+position:absolute;
+animation:spin 4s linear infinite;
 }
 
-@keyframes don{
+.plakresim{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:70px;
+border-radius:50%;
+}
+
+@keyframes spin{
 from{transform:rotate(0deg);}
 to{transform:rotate(360deg);}
 }
 
-.blog{
-width:60%;
-margin:auto;
-background:#111;
-padding:20px;
-border-radius:10px;
-}
+/* linkler */
 
 a{
+display:block;
+margin:10px;
+font-size:18px;
 color:cyan;
 text-decoration:none;
-font-size:20px;
+}
+
+/* blog */
+
+.blog{
+margin-top:30px;
 }
 
 </style>
@@ -42,39 +92,52 @@ font-size:20px;
 
 <body>
 
-<h1>Marshall Enes</h1>
-
-<img src="https://via.placeholder.com/200">
-
-<br><br>
-
-<img class="plak" src="https://i.imgur.com/8Km9tLL.png">
-
-<p>Şu an çalan müzik 🎵</p>
+<!-- müzik -->
 
 <audio autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+<source src="muzik.mp3">
 </audio>
 
-<br><br>
+<!-- plak -->
+
+<div class="plakcontainer">
+
+<img class="plak" src="plak.png">
+
+<img class="plakresim" src="plakresim.jpg">
+
+</div>
+
+<!-- profil -->
+
+<img class="profile" src="profil.jpg">
+
+<h1>Marshall Enes</h1>
+
+<!-- orta alan -->
+
+<div class="middle">
+
+<img class="leftimg" src="araba.jpg">
+
+<div>
 
 <h2>Sosyal Medya</h2>
 
-<a href="#">Instagram</a><br>
-<a href="#">YouTube</a><br>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
 <a href="#">Twitter</a>
-
-<br><br>
 
 <div class="blog">
 
 <h2>Blog</h2>
+<p>Bugün kendi internet sitemi yaptım.</p>
 
-<h3>İlk Yazım</h3>
-<p>Bu benim kişisel internet sitem.</p>
+</div>
 
-<h3>Yeni Yazı</h3>
-<p>Buraya istediğin yazıları ekleyebilirsin.</p>
+</div>
+
+<img class="rightimg" src="resim2.jpg">
 
 </div>
 
